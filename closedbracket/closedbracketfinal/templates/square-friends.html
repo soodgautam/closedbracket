@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Friends</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'closedbracketfinal/app.css' %}">
+    <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+  </head>
+  <body>
+    <div class="out">
+      <div class="page2 js-page2">
+        <div class="header6 js-header6"><button class="header6__burger js-header6-burger"><svg class="icon icon-burger">
+              <use xlink:href="img/sprite.svg#icon-burger"></use>
+            </svg></button><a class="header6__logo" href="#"><img class="header6__pic header6__pic_black" src="img/logo.svg" alt="" /><img class="header6__pic header6__pic_white" src="img/logo-white.svg" alt="" /></a>
+          <nav class="header6__nav"><a class="header6__link" href="{% url 'leaderboard' %}">
+              </svg>Leaderboard</a><a class="header6__link" href="{% url 'play' %}">
+              </svg>Play</a><a class="header6__link active" href="{% url 'profile' %}"><svg class="icon icon-check-square">
+                <use xlink:href="img/sprite.svg#icon-check-square"></use>
+              </svg>Profile</a></nav>
+          <div class="header6__control"><button></button></div><a class="header6__user" href="{% url 'profile' %}">
+            <div class="ava"><img class="ava__pic" src="img/ava-9.png" alt="" /></div>
+            <div class="header6__text">Gautam Sood</div>
+          </a>
+          <div class="header6__bg js-header6-bg"></div>
+        </div>
+        <div class="page2__wrapper">
+          
+          
+          <div class="page2__container">
+            <div class="page2__nav"><a class="page2__link" href="#"><svg class="icon icon-dashboard">
+                  <use xlink:href="img/sprite.svg#icon-dashboard"></use>
+                </svg></a><a class="page2__link active" href="#"><svg class="icon icon-friends">
+                  <use xlink:href="img/sprite.svg#icon-friends"></use>
+                </svg></a><a class="page2__link" href="#"><svg class="icon icon-event">
+                  <use xlink:href="img/sprite.svg#icon-event"></use>
+                </svg></a><a class="page2__link" href="#"><svg class="icon icon-video">
+                  <use xlink:href="img/sprite.svg#icon-video"></use>
+                </svg></a><a class="page2__link" href="#"><svg class="icon icon-photo">
+                  <use xlink:href="img/sprite.svg#icon-photo"></use>
+                </svg></a><a class="page2__link yes" href="#"><svg class="icon icon-bell">
+                  <use xlink:href="img/sprite.svg#icon-bell"></use>
+                </svg></a></div>
+                <div class="friends">
+              <div class="sorting1">
+                <div class="sorting1__row">
+                  <h1 class="sorting1__title title">Friends List</h1>
+                  <div class="sorting1__options">
+                    <div class="sorting1__search js-sorting-search"><button class="sorting1__open js-sorting-open"><svg class="icon icon-search">
+                          <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg></button>
+                      <div class="sorting1__box"><input class="sorting1__input" type="text" placeholder="Search ..."></div>
+                    </div>
+                    <a class="sorting1__filters" href="#"><svg class="icon icon-filters">
+                        <use xlink:href="img/sprite.svg#icon-filters"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="friends__list">
+                <div class="friends__item">
+                  <div class="friends__bg" style="background-image: url(img/friends-bg-1.jpg)"></div>
+                  <div class="friends__body">
+                    <div class="friends__ava"><img class="friends__pic" src="{% static 'closedbracketfinal/max.png' %}" alt=""></div>
+                    <div class="friends__details">
+                      <div class="friends__user">Max Dann</div>
+                      <div class="friends__login">@maxdann</div>
+                      <div class="friends__text">Parallel Programming expert</div><a class="friends__status active" href="#">Following</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="friends__item">
+                  <div class="friends__bg" style="background-image: url(img/friends-bg-2.jpg)"></div>
+                  <div class="friends__body">
+                    <div class="friends__ava"><img class="friends__pic" src="{% static 'closedbracketfinal/duncan.png' %}" alt=""></div>
+                    <div class="friends__details">
+                      <div class="friends__user">Fredo</div>
+                      <div class="friends__login">@duncan</div>
+                      <div class="friends__text">C# and Arduino enthusiast</div><a class="friends__status active" href="#">Following</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="friends__item">
+                  <div class="friends__bg" style="background-image: url(img/friends-bg-3.jpg)"></div>
+                  <div class="friends__body">
+                    <div class="friends__ava"><img class="friends__pic" src="{% static 'closedbracketfinal/mag.png' %}" alt=""></div>
+                    <div class="friends__details">
+                      <div class="friends__user">Magnus</div>
+                      <div class="friends__login">@magnus</div>
+                      <div class="friends__text">Java and JavaSwing Builder developer</div><a class="friends__status" href="#">Follow</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="friends__item">
+                  <div class="friends__bg" style="background-image: url(img/friends-bg-4.jpg)"></div>
+                  <div class="friends__body">
+                    <div class="friends__ava"><img class="friends__pic" src="{% static 'closedbracketfinal/trenton.png' %}" alt=""></div>
+                    <div class="friends__details">
+                      <div class="friends__user">Trenton</div>
+                      <div class="friends__login">@trenton</div>
+                      <div class="friends__text">UI/UX Designer</div><a class="friends__status active" href="#">Following</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="friends__item">
+                  <div class="friends__bg" style="background-image: url(img/friends-bg-4.jpg)"></div>
+                  <div class="friends__body">
+                    <div class="friends__ava"><img class="friends__pic" src="{% static 'closedbracketfinal/natalie.png' %}" alt=""></div>
+                    <div class="friends__details">
+                      <div class="friends__user">Natalie</div>
+                      <div class="friends__login">@nat</div>
+                      <div class="friends__text">Python Developer @ Apple</div><a class="friends__status active" href="#">Following</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'closedbracketfinal/app.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/common.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/charts.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">    
+    <link rel="stylesheet" type="text/css" href="{% static 'closedbracketfinal/app.css' %}">
+    <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+  </head>
+  <body>
+    <div class="out">
+      <div class="page2 js-page2">
+        <div class="header6 js-header6"><button class="header6__burger js-header6-burger"><svg class="icon icon-burger">
+              <use xlink:href="img/sprite.svg#icon-burger"></use>
+            </svg></button><a class="header6__logo" href="#"><img class="header6__pic header6__pic_black" src="img/logo.svg" alt="" /><img class="header6__pic header6__pic_white" src="img/logo-white.svg" alt="" /></a>
+          <nav class="header6__nav"><a class="header6__link" href="{% url 'leaderboard' %}">
+              </svg>Leaderboard</a><a class="header6__link" href="{% url 'play' %}">
+              </svg>Play</a><a class="header6__link active" href="{% url 'profile' %}"><svg class="icon icon-check-square">
+                <use xlink:href="img/sprite.svg#icon-check-square"></use>
+              </svg>Profile</a></nav>
+          <div class="header6__control"><button></button></div><a class="header6__user" href="{% url 'profile' %}">
+            <div class="ava"><img class="ava__pic" src="img/ava-9.png" alt="" /></div>
+            <div class="header6__text">Gautam Sood</div>
+          </a>
+          <div class="header6__bg js-header6-bg"></div>
+        </div>
+        <div class="page2__wrapper">
+          <div class="sidebar2 js-sidebar2">
+            <label class="switch switch_theme"><input class="switch__input js-switch-theme" type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span class="switch__icon"><svg class="icon icon-moon">
+                    <use xlink:href="img/sprite.svg#icon-moon"></use>
+                  </svg><svg class="icon icon-sun">
+                    <use xlink:href="img/sprite.svg#icon-sun"></use>
+                  </svg></span></span></label>
+          </div>
+          <div class="users1 js-users1">
+            <div class="users1__wrapper">
+              
+              <div class="users1__group">
+                <div class="users1__category">Friends</div>
+                <div class="users1__list"><a class="users1__item" href="#">
+                    <div class="ava active"><img class="ava__pic" src="{% static 'closedbracketfinal/max.png' %}" alt="" /></div>
+                    <div class="users1__text">Max</div>
+                    <div class="users1__time">11 min</div>
+                  </a><a class="users1__item" href="#">
+                    <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/mag.png' %}" alt="" /></div>
+                    <div class="users1__text">Magnus</div>
+                    <div class="users1__online"></div>
+                  </a><a class="users1__item" href="#">
+                    <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/dee.png' %}" alt="" /></div>
+                    <div class="users1__text">Deevena</div>
+                    <div class="users1__online"></div>
+                  </a><a class="users1__item" href="#">
+                    <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/natalie.png' %}" alt="" /></div>
+                    <div class="users1__text">Natalie</div>
+                    <div class="users1__time">11 min</div>
+                  </a><a class="users1__item" href="#">
+                    <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/duncan.png' %}" alt="" /></div>
+                    <div class="users1__text">Duncan</div>
+                    <div class="users1__time">9 min</div>
+                  </a><a class="users1__item" href="#">
+                    <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/trenton.png' %}" alt="" /></div>
+                    <div class="users1__text">Trenton</div>
+                    <div class="users1__online"></div>
+                  </a><a class="users1__item" href="#">
+                    <div class="ava active"><img class="ava__pic" src="{% static 'closedbracketfinal/aco.png' %}" alt="" /></div>
+                    <div class="users1__text">Alexander</div>
+                    <div class="users1__online"></div>
+                  
+                  </a></div>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="page2__container">
+            <div class="profile profile_user">
+              <div class="profile__bg"><img src="{% static 'closedbracketfinal/bg-profile.jpg' %}" alt="" /><a class="profile__edit" href="{% url 'signin' %}">Logout<svg class="icon icon-edit">
+                    <use xlink:href="img/sprite.svg#icon-edit"></use>
+                  </svg></a></div>
+              <div class="profile__user">
+                <div class="profile__ava"><img class="profile__pic" src="{% static 'closedbracketfinal/gautam.png' %}" alt=""></div>
+                <div class="profile__details"><span class="profile__title title">Gautam Sood</span><span class="profile__login">@gsood</span></div>
+                <div class="profile__text">“I enjoy long walks on the beach and a hot cup of Cocoa at night”</div>
+              </div>
+              <div class="profile__options">
+                <div class="profile__option"><a class="profile__link active" href="#">
+                    <div class="profile__category">Games Played</div>
+                    <div class="profile__number">412</div>
+                  </a></div>
+                <div class="profile__option"><a class="profile__link" href="#">
+                    <div class="profile__category">Games Won</div>
+                    <div class="profile__number">97</div>
+                  </a></div>
+                <div class="profile__option"><a class="profile__link" href="{% url 'friends' %}">
+                    <div class="profile__category">Friends</div>
+                    <div class="profile__number">263</div>
+                  </a></div>
+                <div class="profile__option"><a class="profile__link" href="#">
+                    <div class="profile__category">Current Rank</div>
+                    <div class="profile__number">792</div>
+                  </a></div>
+                
+              </div>
+            </div>
+            <div class="page2__row">
+              <div class="page2__col page2__col_w35">
+                
+                <div class="card1">
+                  <div class="card1__head">
+                    <div class="card1__category">About Me</div>
+                    <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                          <use xlink:href="img/sprite.svg#icon-dots"></use>
+                        </svg></button>
+                    
+                    </div>
+                  </div>
+                  <div class="card1__body">
+                    <div class="card1__note">"I’m a software engineer in Toronto, ON with a passion for computer science, electrical engineering and embedded systems technology."</div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+              <div class="page2__col page2__col_w65">
+                
+                        <div class="admin__chart admin__chart_financial">
+                          <div id="chart-financial-goals"></div>
+                        </div>
+                        <div class="admin__bottom">
+                          <div class="admin__details"><a class="admin__title title title_sm" href="#">Past Performance<svg class="icon icon-arrow-right">
+                                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                              </svg></a>
+                            <div class="admin__info">Number of problems attempted</div>
+                          </div>
+                          <div class="admin__variants">
+                            <div class="admin__text">Show Data:</div><select class="admin__select">
+                              <option selected>This Week</option>
+                              <option>This Week</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="post__options">
+                      <div class="post__actions"><button class="post__action"><svg class="icon icon-image">
+                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                          </svg></button><button class="post__action"><svg class="icon icon-emoticon">
+                            <use xlink:href="img/sprite.svg#icon-emoticon"></use>
+                          </svg></button><button class="post__action"><svg class="icon icon-gif">
+                            <use xlink:href="img/sprite.svg#icon-gif"></use>
+                          </svg></button><button class="post__action"><svg class="icon icon-chart">
+                            <use xlink:href="img/sprite.svg#icon-chart"></use>
+                          </svg></button></div><button class="post__btn btn btn_blue">Share Post</button>
+                    </div>
+                  </div>
+                  
+                  
+                      
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'closedbracketfinal/app.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/common.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/charts.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Results</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'closedbracketfinal/app.css' %}">
+    <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+  </head>
+  <body>
+    <div class="out">
+      <div class="page4 js-page4">
+        <div class="header6 js-header6"><button class="header6__burger js-header6-burger"><svg class="icon icon-burger">
+              <use xlink:href="img/sprite.svg#icon-burger"></use>
+            </svg></button><a class="header6__logo" href="#"><img class="header6__pic header6__pic_black" src="img/logo.svg" alt="" /><img class="header6__pic header6__pic_white" src="img/logo-white.svg" alt="" /></a>
+          <nav class="header6__nav"><a class="header6__link" href="{% url 'leaderboard' %}">
+              </svg>Leaderboard</a><a class="header6__link active" href="{% url 'play' %}">
+              </svg>Play</a><a class="header6__link" href="{% url 'profile' %}"><svg class="icon icon-check-square">
+                <use xlink:href="img/sprite.svg#icon-check-square"></use>
+              </svg>Profile</a></nav>
+          <div class="header6__control"><button></button></div><a class="header6__user" href="{% url 'profile' %}">
+            <div class="ava"><img class="ava__pic" src="img/ava-9.png" alt="" /></div>
+            <div class="header6__text">Gautam Sood</div>
+          </a>
+          <div class="header6__bg js-header6-bg"></div>
+        </div>
+        <div class="page4__wrapper page4__wrapper_pd80 page4__wrapper_bg">
+          
+          <div class="sidebar4 js-sidebar4 sidebar4_hide">
+            <div class="sidebar4__top"><button class="sidebar4__close js-sidebar4-close"><svg class="icon icon-close">
+                  <use xlink:href="img/sprite.svg#icon-close"></use>
+                </svg></button><a class="sidebar4__logo" href="#"><img class="sidebar4__pic sidebar4__pic_black" src="img/logo.svg" alt="" /><img class="sidebar4__pic sidebar4__pic_white" src="img/logo-white.svg" alt="" /></a></div>
+            <div class="sidebar4__wrapper">
+              <div class="sidebar4__menu"><a class="sidebar4__item" href="circle-knowledge-base.html"><svg class="icon icon-dashboard">
+                    <use xlink:href="img/sprite.svg#icon-dashboard"></use>
+                  </svg>Home</a><a class="sidebar4__item" href="circle-forums.html"><svg class="icon icon-search">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>Forum</a>
+                <div class="sidebar4__item"><a class="sidebar4__head" href="circle-topics.html"><svg class="icon icon-calendar-1">
+                      <use xlink:href="img/sprite.svg#icon-calendar-1"></use>
+                    </svg>Search Topics</a>
+                  <div class="sidebar4__body"><a class="sidebar4__link" href="#">Design<div class="sidebar4__number">11</div></a><a class="sidebar4__link active" href="#">Develop<div class="sidebar4__number">7</div></a><a class="sidebar4__link" href="#">Tools Used<div class="sidebar4__number">3</div></a></div>
+                </div><a class="sidebar4__item" href="#"><svg class="icon icon-saved">
+                    <use xlink:href="img/sprite.svg#icon-saved"></use>
+                  </svg>Archive</a>
+              </div>
+            </div><label class="switch switch_theme"><input class="switch__input js-switch-theme" type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span class="switch__icon"><svg class="icon icon-moon">
+                    <use xlink:href="img/sprite.svg#icon-moon"></use>
+                  </svg><svg class="icon icon-sun">
+                    <use xlink:href="img/sprite.svg#icon-sun"></use>
+                  </svg></span></span></label>
+          </div>
+          <div class="knowledge">
+            <div class="knowledge__center">
+              <div class="knowledge__question">See how you did!</div>
+              
+              
+              <div class="knowledge__list">
+                <div class="knowledge__item">
+                  <div class="knowledge__preview"><img class="knowledge__pic" src="{% static 'closedbracketfinal/award-fill.svg' %}" alt=""></div><a class="knowledge__category" href="{% url 'editor' %}">Pass/Fail</a>
+                  <div class="knowledge__text">You <strong>Passed</strong> the challenge!</div>
+                </div>
+                <div class="knowledge__item">
+                  <div class="knowledge__preview"><img class="knowledge__pic" src="{% static 'closedbracketfinal/arrow-right-circle-fill.svg' %}" alt=""></div><a class="knowledge__category" href="{% url 'editor' %}">Runtime</a>
+                  <div class="knowledge__text">The runtime of your solution was <strong>3.05 seconds</strong></div>
+                </div>
+                <div class="knowledge__item">
+                  <div class="knowledge__preview"><img class="knowledge__pic" src="{% static 'closedbracketfinal/clock-fill.svg' %}" alt=""></div><a class="knowledge__category" href="{% url 'editor' %}">Solve Time</a>
+                  <div class="knowledge__text">It took you <strong>7 minutes</strong> to solve this problem</div>
+                </div>
+                <div class="knowledge__item">
+                  <div class="knowledge__preview"><img class="knowledge__pic" src="{% static 'closedbracketfinal/trophy-fill.svg' %}" alt=""></div><a class="knowledge__category" href="{% url 'editor' %}">Ranking</a>
+                  <div class="knowledge__text">Congratulations, you are now ranked <strong>1</strong> on the leaderboard</div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'closedbracketfinal/app.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/common.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/charts.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+   
+ 
+    <link rel="stylesheet" type="text/css" href="{% static 'closedbracketfinal/app.css' %}">
+    <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+  </head>
+  <body>
+    <div class="out">
+      <div class="login">
+        <div class="login__container">
+          <div class="login__wrap">
+            <div class="login__head"><a class="login__logo" href="#"><img class="login__pic" src="img/logo-white.svg" alt=""></a></div>
+            <form class="login__form">
+              <div class="login__body">
+                <div class="login__title login__title_sm">Login to your acount</div>
+                <div class="login__field field">
+                  <div class="field__wrap"><input class="field__input"  placeholder="Your email"></div>
+                </div>
+                <a  href="{% url 'results' %}"><button class="login__btn btn btn btn_blue" id="myBtn">Login</button></a>
+
+                <ul class="login__links">
+                  <li><a class="login__link" href="{% url 'register' %}">Sign up for new user?</a></li>
+                </ul>
+              </div>
+            </form>
+            
+          </div>
+        </div><label class="switch switch_theme"><input class="switch__input js-switch-theme" type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span class="switch__icon"><svg class="icon icon-moon">
+                <use xlink:href="img/sprite.svg#icon-moon"></use>
+              </svg><svg class="icon icon-sun">
+                <use xlink:href="img/sprite.svg#icon-sun"></use>
+              </svg></span></span></label>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/charts.js"></script>
+  </body>
+</html>

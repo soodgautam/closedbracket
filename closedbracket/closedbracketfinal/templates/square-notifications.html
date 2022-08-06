@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Leaderboard</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">    
+    <link rel="stylesheet" type="text/css" href="{% static 'closedbracketfinal/app.css' %}">
+    <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+  </head>
+  <body>
+    <div class="out">
+      <div class="page2">
+        <div class="header6 js-header6"><button class="header6__burger js-header6-burger"><svg class="icon icon-burger">
+              <use xlink:href="img/sprite.svg#icon-burger"></use>
+            </svg></button><a class="header6__logo" href="#"><img class="header6__pic header6__pic_black" src="img/logo.svg" alt="" /><img class="header6__pic header6__pic_white" src="img/logo-white.svg" alt="" /></a>
+          <nav class="header6__nav"><a class="header6__link active" href="{% url 'leaderboard' %}">
+              </svg>Leaderboard</a><a class="header6__link" href="{% url 'play' %}">
+              </svg>Play</a><a class="header6__link" href="{% url 'profile' %}"><svg class="icon icon-check-square">
+                <use xlink:href="img/sprite.svg#icon-check-square"></use>
+              </svg>Profile</a></nav>
+          <div class="header6__control"><button></button></div><a class="header6__user" href="{% url 'profile' %}">
+            <div class="ava"><img class="ava__pic" src="img/ava-9.png" alt="" /></div>
+            <div class="header6__text">Gautam Sood</div>
+          </a>
+          <div class="header6__bg js-header6-bg"></div>
+        </div>
+        <div class="page2__wrapper">
+          
+          
+          <div class="page2__container">
+            <div class="page2__nav"><a class="page2__link" href="#"><svg class="icon icon-dashboard">
+                  <use xlink:href="img/sprite.svg#icon-dashboard"></use>
+                </svg></a><a class="page2__link" href="#"><svg class="icon icon-friends">
+                  <use xlink:href="img/sprite.svg#icon-friends"></use>
+                </svg></a><a class="page2__link" href="#"><svg class="icon icon-event">
+                  <use xlink:href="img/sprite.svg#icon-event"></use>
+                </svg></a><a class="page2__link" href="#"><svg class="icon icon-video">
+                  <use xlink:href="img/sprite.svg#icon-video"></use>
+                </svg></a><a class="page2__link" href="#"><svg class="icon icon-photo">
+                  <use xlink:href="img/sprite.svg#icon-photo"></use>
+                </svg></a><a class="page2__link active yes" href="#"><svg class="icon icon-bell">
+                  <use xlink:href="img/sprite.svg#icon-bell"></use>
+                </svg></a></div>
+            <div class="notifications">
+              <div class="sorting1">
+                <div class="sorting1__row">
+                  <h1 class="sorting1__title title">Leaderboard</h1>
+                  
+                </div>
+              </div>
+              <div class="notifications__list">
+                <div class="notifications__item active">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/gautam.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Gautam</strong> is rank: <strong>1</strong> just finished a binary search tree question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_friends"><svg class="icon icon-friends">
+                      <use xlink:href="img/sprite.svg#icon-friends"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+                <div class="notifications__item">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/duncan.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Duncan</strong> is rank: <strong>2</strong> just finished a red black tree question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_like"><svg class="icon icon-like">
+                      <use xlink:href="img/sprite.svg#icon-like"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+                <div class="notifications__item">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/dee.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Deevena</strong> is rank: <strong>3</strong> just finished a linked list question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_comment"><svg class="icon icon-comment">
+                      <use xlink:href="img/sprite.svg#icon-comment"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+                <div class="notifications__item active">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/mag.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Magnus</strong> is rank: <strong>4</strong> just finished a binary search tree question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_friends"><svg class="icon icon-friends">
+                      <use xlink:href="img/sprite.svg#icon-friends"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+                <div class="notifications__item">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/aco.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Alexander</strong> is rank: <strong>5</strong> just finished a queuing question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_like"><svg class="icon icon-like">
+                      <use xlink:href="img/sprite.svg#icon-like"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+                <div class="notifications__item">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/natalie.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Natalie</strong> is rank: <strong>6</strong> just finished a priority queue question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_comment"><svg class="icon icon-comment">
+                      <use xlink:href="img/sprite.svg#icon-comment"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+                <div class="notifications__item active">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/max.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Max</strong> is rank: <strong>7</strong> just finished a red black tree question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_friends"><svg class="icon icon-friends">
+                      <use xlink:href="img/sprite.svg#icon-friends"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+                <div class="notifications__item">
+                  <div class="ava"><img class="ava__pic" src="{% static 'closedbracketfinal/trenton.png' %}" alt=""></div>
+                  <div class="notifications__details">
+                    <div class="notifications__text"><strong>Trenton</strong> is rank: <strong>8</strong> just finished a binary search tree question</div>
+                    <div class="notifications__time">12 Minutes ago</div>
+                  </div>
+                  <div class="notifications__icon notifications__icon_comment"><svg class="icon icon-comment">
+                      <use xlink:href="img/sprite.svg#icon-comment"></use>
+                    </svg></div>
+                  <div class="options2 js-options"><button class="options2__btn js-options-btn"><svg class="icon icon-dots">
+                        <use xlink:href="img/sprite.svg#icon-dots"></use>
+                      </svg></button>
+                    <div class="options2__dropdown js-options-dropdown"><a class="options2__link" href="#">Remove Notifications</a><a class="options2__link" href="#">Turn Off Notifications from Janeta</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'closedbracketfinal/app.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/common.js' %}"></script>
+    <script src="{% static 'closedbracketfinal/charts.js' %}"></script>
+  </body>
+</html>
